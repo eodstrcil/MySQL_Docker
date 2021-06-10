@@ -1,0 +1,16 @@
+version: "2.4"
+services:
+    mysql:
+        container_name: mysqld
+        image: mysql:5.7.25
+        volumes: 
+            - ./sql-data/db:/var/lib/mysql
+        ports: 
+            - "3306:3306"
+        hostname: datamysql
+        environment: 
+            MYSQL_DATABASE: 'datadb'
+            MYSQL_USER: 'datauser'
+            MYSQL_PASSWORD: 'Dat4Pas'
+            MYSQL_ROOT_PASSWORD: 'rOotPAss21'
+            MYSQL_ROOT_PASSWORD: 'rOotPAss21'
